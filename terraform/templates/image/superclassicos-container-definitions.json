@@ -1,0 +1,35 @@
+[
+  {
+    "environment": [
+      {
+        "name": "OTP_URL",
+        "value": "http://ec2-3-213-249-248.compute-1.amazonaws.com"
+      },
+      {
+        "name": "DATABASE_URL",
+        "value": "postgresql://postgres:postgres@ec2-3-90-93-143.compute-1.amazonaws.com:5432/postgres"
+      }
+    ],
+    "essential": true,
+    "image": "${app_image}",
+    "name": "${app_name}",
+    "portMappings": [
+      {
+        "hostPort": ${container_port
+        },
+        "protocol": "tcp",
+        "containerPort": ${app_port
+        }
+      }
+    ],
+    "logConfiguration": {
+      "logDriver": "awslogs",
+      "options": {
+        "awslogs-group": "${app_name}-awslogs",
+        "awslogs-region": "us-east-1",
+        "awslogs-stream-prefix": "ecs",
+        "awslogs-create-group": "true"
+      }
+    }
+  }
+]
