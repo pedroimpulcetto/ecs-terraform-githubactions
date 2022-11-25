@@ -3,11 +3,11 @@
     "environment": [
       {
         "name": "OTP_URL",
-        "value": "http://ec2-3-213-249-248.compute-1.amazonaws.com"
+        "value": ""
       },
       {
         "name": "DATABASE_URL",
-        "value": "postgresql://postgres:postgres@ec2-3-90-93-143.compute-1.amazonaws.com:5432/postgres"
+        "value": ""
       }
     ],
     "essential": true,
